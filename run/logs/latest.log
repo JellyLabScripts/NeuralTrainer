@@ -1,0 +1,43 @@
+[23:25:05] [Client thread/INFO]: Setting user: Player959
+[23:25:07] [Client thread/INFO]: LWJGL Version: 2.9.2
+[23:25:15] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:neuraltrainer, FMLFileResourcePack:OneConfig
+[23:25:16] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:25:16] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[23:25:16] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:25:16] [Thread-7/INFO]: OpenAL initialized.
+[23:25:16] [Sound Library Loader/INFO]: Sound engine started
+[23:25:19] [Client thread/INFO]: Created: 16x16 textures-atlas
+[23:25:20] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:neuraltrainer, FMLFileResourcePack:OneConfig
+[23:25:20] [Client thread/INFO]: SoundSystem shutting down...
+[23:25:21] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[23:25:21] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:25:21] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[23:25:21] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:25:21] [Thread-9/INFO]: OpenAL initialized.
+[23:25:21] [Sound Library Loader/INFO]: Sound engine started
+[23:25:24] [Client thread/INFO]: Created: 512x512 textures-atlas
+[23:25:28] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[23:25:28] [Server thread/INFO]: Generating keypair
+[23:25:29] [Server thread/INFO]: Preparing start region for level 0
+[23:25:30] [Server thread/INFO]: Changing view distance to 12, from 10
+[23:25:31] [Server thread/INFO]: Player959[local:E:e1311054] logged in with entity id 19 at (258.06816631065846, 4.0, 353.2329953891904)
+[23:25:31] [Server thread/INFO]: Player959 joined the game
+[23:25:57] [Server thread/INFO]: Saving and pausing game...
+[23:25:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:25:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:25:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:26:01] [Client thread/INFO]: [CHAT] §9§lMightyMiner §r§8» §b§lEnabled recording
+[23:26:04] [Client thread/INFO]: [CHAT] §9§lMightyMiner §r§8» §b§lDisabled recording
+[23:26:04] [Server thread/INFO]: Saving and pausing game...
+[23:26:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:26:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:26:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:26:08] [Client thread/INFO]: Stopping!
+[23:26:08] [Client thread/INFO]: SoundSystem shutting down...
+[23:26:08] [Server thread/INFO]: Stopping server
+[23:26:08] [Server thread/INFO]: Saving players
+[23:26:08] [Server thread/INFO]: Saving worlds
+[23:26:08] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:26:08] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:26:08] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:26:08] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
