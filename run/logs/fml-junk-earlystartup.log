@@ -6,3 +6,225 @@
 [23:24:56] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
 [23:24:59] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
 [23:24:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:31] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:40:31] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:40:31] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:40:31] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:31] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:31] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:40:34] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:40:34] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:33] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:43:33] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:43:33] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:43:33] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:33] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:33] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:43:38] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:43:38] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:43:38] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:43:38] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:38] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:38] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:43:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:43:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:20] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:44:20] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:44:20] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:44:20] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:20] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:20] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:44:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:44:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:38] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:44:38] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:44:38] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:44:39] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:39] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:39] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:44:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:44:41] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:58] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:44:58] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:44:58] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:44:58] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:58] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:44:58] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:45:01] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:45:01] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:14] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:45:14] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:45:14] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:45:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:14] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:14] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:45:16] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:45:16] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:44] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:45:44] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:45:44] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:45:44] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:44] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:44] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:45:46] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:45:46] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:01] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:46:01] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:46:01] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:46:01] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:01] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:01] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:46:03] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:46:03] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:21] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:46:21] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:46:21] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:46:21] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:21] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:21] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:46:23] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:46:23] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:49] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:46:49] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:46:49] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:46:49] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:49] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:46:49] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:46:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:46:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:47:04] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:47:05] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:47:05] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:47:05] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:47:05] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:47:05] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:47:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:47:07] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:48:48] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:48:48] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:48:48] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:48:48] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:48:48] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:48:48] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:48:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:48:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:10] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:49:10] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:49:10] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:49:11] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:11] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:11] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:49:13] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:49:13] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:28] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:49:28] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:49:28] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:49:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:28] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:28] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:49:30] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:49:30] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:42] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:49:42] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:49:42] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:49:42] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:42] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:49:42] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:49:44] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:49:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:50:09] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:50:09] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:50:09] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:50:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:50:09] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:50:09] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:50:11] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:50:11] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:51:04] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:51:04] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:51:04] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:51:05] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:51:05] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:51:05] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:51:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:51:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:52:08] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:52:08] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:52:08] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:52:08] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:52:08] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:52:08] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:52:10] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:52:10] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:53:28] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:53:28] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:53:28] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:53:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:53:28] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:53:28] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:53:30] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:53:30] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:53:48] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:53:48] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:53:48] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:53:48] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:53:48] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:53:48] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:53:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:53:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:54:17] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:54:17] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:54:17] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:54:17] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:54:17] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:54:17] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:54:18] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:54:18] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:54:41] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:54:41] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:54:41] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:54:41] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:54:41] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:54:41] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:54:43] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:54:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:55:12] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:55:12] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:55:12] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:55:12] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:55:12] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:55:12] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:55:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:55:14] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:09] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:57:09] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:57:09] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:57:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:09] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:09] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:57:12] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:57:12] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:30] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:57:30] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:57:30] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:57:30] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:30] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:30] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:57:32] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:57:32] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:45] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:57:45] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:57:45] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:57:45] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:45] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:57:45] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:57:46] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:57:46] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:58:01] [main/INFO] [GradleStart]: Extra: [--mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker]
+[00:58:01] [main/INFO] [GradleStart]: Found and added coremod: me.djtheredstoner.devauth.forge.legacy.DevAuthLoadingPlugin
+[00:58:01] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/jellylab/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --mixin, mixins.forager.json, --tweakClass, cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:58:01] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:58:01] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:58:01] [main/INFO] [LaunchWrapper]: Loading tweak class name cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker
+[00:58:03] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:58:03] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker

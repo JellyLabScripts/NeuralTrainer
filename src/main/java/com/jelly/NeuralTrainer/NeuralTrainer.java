@@ -2,6 +2,7 @@ package com.jelly.NeuralTrainer;
 
 
 import com.jelly.NeuralTrainer.data.MovementDataCollector;
+import com.jelly.NeuralTrainer.run.PlaybackHelper;
 import com.jelly.NeuralTrainer.utils.KeyBindUtils;
 import com.jelly.NeuralTrainer.utils.LogUtils;
 import net.minecraft.client.settings.KeyBinding;
@@ -20,12 +21,14 @@ public class NeuralTrainer
     public static final String MODID = "neuraltrainer";
     public static final String VERSION = "v1.0";
     public static MovementDataCollector movementDataCollector = new MovementDataCollector();
+    public static PlaybackHelper playbackHelper = new PlaybackHelper();
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
         KeyBindUtils.init();
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(movementDataCollector);
+        MinecraftForge.EVENT_BUS.register(playbackHelper);
     }
 
     @SubscribeEvent

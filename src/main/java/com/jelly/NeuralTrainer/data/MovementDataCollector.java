@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class MovementDataCollector {
     private final Minecraft mc = Minecraft.getMinecraft();
-    private final String DATASET_PATH = "raw_dataset/movement_dataset.txt";
+    public static final String DATASET_PATH = "raw_dataset/movement_dataset.txt";
 
     private final KeyBinding keybindA = mc.gameSettings.keyBindLeft;
     private final KeyBinding keybindD =  mc.gameSettings.keyBindRight;
