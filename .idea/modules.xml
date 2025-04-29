@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Forge Modding.NeuralTrainer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Forge Modding.NeuralTrainer.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/NeuralTrainer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/NeuralTrainer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NeuralTrainer.test.iml" filepath="$PROJECT_DIR$/.idea/modules/NeuralTrainer.test.iml" />
     </modules>
   </component>
 </project>

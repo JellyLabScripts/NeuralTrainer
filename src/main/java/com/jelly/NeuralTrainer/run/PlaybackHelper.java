@@ -1,6 +1,5 @@
 package com.jelly.NeuralTrainer.run;
 
-import cc.polyfrost.oneconfig.config.annotations.KeyBind;
 import com.jelly.NeuralTrainer.utils.KeyBindUtils;
 import com.jelly.NeuralTrainer.utils.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -8,16 +7,13 @@ import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Objects;
 
-import static com.jelly.NeuralTrainer.data.MovementDataCollector.DATASET_PATH;
+import static com.jelly.NeuralTrainer.data.PlaybackDataCollector.DATASET_PATH;
 
 public class PlaybackHelper {
     private final Minecraft mc = Minecraft.getMinecraft();

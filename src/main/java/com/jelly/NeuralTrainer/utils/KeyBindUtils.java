@@ -9,11 +9,12 @@ import org.lwjgl.input.Keyboard;
 public class KeyBindUtils {
 
     private static Minecraft mc = Minecraft.getMinecraft();
-    public static KeyBinding[] keybinds = new KeyBinding[2];
+    public static KeyBinding[] keybinds = new KeyBinding[3];
 
     public static void init() {
-        keybinds[0] = new KeyBinding("Start/stop data collection", Keyboard.KEY_K, "NeuralTrainer");
-        keybinds[1] = new KeyBinding("Start/stop data playback", Keyboard.KEY_GRAVE, "NeuralTrainer");
+        keybinds[0] = new KeyBinding("Start/stop playback data collection", 0, "NeuralTrainer");
+        keybinds[1] = new KeyBinding("Start/stop data playback", 0, "NeuralTrainer");
+        keybinds[2] = new KeyBinding("Start/stop mithril data collection", 0, "NeuralTrainer");
         for (KeyBinding customKeyBind : keybinds) {
             ClientRegistry.registerKeyBinding(customKeyBind);
         }
@@ -21,13 +22,12 @@ public class KeyBindUtils {
 
     public static void onKeyPress (){
         if(keybinds[0].isKeyDown()){
-
-            if(NeuralTrainer.movementDataCollector.isRecording()) {
+            if(NeuralTrainer.playbackDataCollector.isRecording()) {
                 LogUtils.addMessage("Disabled recording");
-                NeuralTrainer.movementDataCollector.stopRecording();
+                NeuralTrainer.playbackDataCollector.stopRecording();
             } else {
                 LogUtils.addMessage("Enabled recording");
-                NeuralTrainer.movementDataCollector.startRecording();
+                NeuralTrainer.playbackDataCollector.startRecording();
 
             }
         }
@@ -40,6 +40,18 @@ public class KeyBindUtils {
             } else {
                 LogUtils.addMessage("Enabled playback");
                 NeuralTrainer.playbackHelper.startPlayback();
+            }
+        }
+
+        if(keybinds[2].isKeyDown()){
+
+            if(NeuralTrainer.screenDataCollector.isRecording()) {
+                LogUtils.addMessage("Disabled recording");
+                NeuralTrainer.screenDataCollector.stopRecording();
+            } else {
+                LogUtils.addMessage("Enabled recording");
+                NeuralTrainer.screenDataCollector.startRecording();
+
             }
         }
 
