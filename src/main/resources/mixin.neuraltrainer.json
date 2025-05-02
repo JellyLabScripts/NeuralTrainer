@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "com.jelly.NeuralTrainer.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "mixins.neuraltrainer.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

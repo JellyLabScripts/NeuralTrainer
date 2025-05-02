@@ -51,8 +51,8 @@ public class ScreenDataCollector {
         float deltaYaw = Float.isNaN(lastYaw) ? 0 : wrapAngle(currentYaw - lastYaw);
         float deltaPitch = Float.isNaN(lastPitch) ? 0 : wrapAngle(currentPitch - lastPitch);
 
-        int discretizedYaw = discretize(deltaYaw, new int[]{-300, -200, -100, -50, -20, -10, -4, -2, 0, 2, 4, 10, 20, 50, 100, 200, 300});
-        int discretizedPitch = discretize(deltaPitch, new int[]{-50, -20, -10, -4, -2, 0, 2, 4, 10, 20, 50});
+        int discretizedYaw = discretize(deltaYaw, new int[]{-90, -50, -20, -10, -4, -2, 0, 2, 4, 10, 20, 50, 90});
+        int discretizedPitch = discretize(deltaPitch, new int[]{-40, -20, -10, -4, -2, 0, 2, 4, 10, 20, 40});
 
         lastYaw = currentYaw;
         lastPitch = currentPitch;
@@ -68,7 +68,6 @@ public class ScreenDataCollector {
         };
 
         try {
-
             // Capture framebuffer pixels
             int width = mc.getFramebuffer().framebufferTextureWidth;
             int height = mc.getFramebuffer().framebufferTextureHeight;
@@ -90,9 +89,9 @@ public class ScreenDataCollector {
                 grayscaleFullRes[i] = gray;
             }
 
-            // Downscale to 280x150 manually
-            int targetWidth = 280;
-            int targetHeight = 150;
+            // Downscale to 32 x 32
+            int targetWidth = 32;
+            int targetHeight = 32;
             int scaleX = width / targetWidth;
             int scaleY = height / targetHeight;
 

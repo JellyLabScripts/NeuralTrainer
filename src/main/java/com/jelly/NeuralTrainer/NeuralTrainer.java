@@ -3,6 +3,7 @@ package com.jelly.NeuralTrainer;
 
 import com.jelly.NeuralTrainer.data.PlaybackDataCollector;
 import com.jelly.NeuralTrainer.data.ScreenDataCollector;
+import com.jelly.NeuralTrainer.run.NeuralNetworkRunner;
 import com.jelly.NeuralTrainer.run.PlaybackHelper;
 import com.jelly.NeuralTrainer.utils.KeyBindUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,15 +21,23 @@ public class NeuralTrainer
     public static PlaybackDataCollector playbackDataCollector = new PlaybackDataCollector();
     public static PlaybackHelper playbackHelper = new PlaybackHelper();
     public static ScreenDataCollector screenDataCollector = new ScreenDataCollector();
+    public static NeuralNetworkRunner neuralNetworkRunner = new NeuralNetworkRunner();
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+
+        System.out.println("tensorflow java library path: " + System.getProperty("java.library.path"));
+
         KeyBindUtils.init();
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(playbackDataCollector);
         MinecraftForge.EVENT_BUS.register(playbackHelper);
         MinecraftForge.EVENT_BUS.register(screenDataCollector);
+        MinecraftForge.EVENT_BUS.register(neuralNetworkRunner);
+
+
+
     }
 
     @SubscribeEvent

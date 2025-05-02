@@ -4,17 +4,17 @@ import com.jelly.NeuralTrainer.NeuralTrainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
-import org.lwjgl.input.Keyboard;
 
 public class KeyBindUtils {
 
     private static Minecraft mc = Minecraft.getMinecraft();
-    public static KeyBinding[] keybinds = new KeyBinding[3];
+    public static KeyBinding[] keybinds = new KeyBinding[4];
 
     public static void init() {
         keybinds[0] = new KeyBinding("Start/stop playback data collection", 0, "NeuralTrainer");
         keybinds[1] = new KeyBinding("Start/stop data playback", 0, "NeuralTrainer");
         keybinds[2] = new KeyBinding("Start/stop mithril data collection", 0, "NeuralTrainer");
+        keybinds[3] = new KeyBinding("Start/stop running neural network", 0, "NeuralTrainer");
         for (KeyBinding customKeyBind : keybinds) {
             ClientRegistry.registerKeyBinding(customKeyBind);
         }
@@ -52,6 +52,17 @@ public class KeyBindUtils {
                 LogUtils.addMessage("Enabled recording");
                 NeuralTrainer.screenDataCollector.startRecording();
 
+            }
+        }
+
+        if(keybinds[3].isKeyDown()){
+
+            if(NeuralTrainer.neuralNetworkRunner.running()) {
+                LogUtils.addMessage("Stopped running neural network");
+                NeuralTrainer.neuralNetworkRunner.stopRunning();
+            } else {
+                LogUtils.addMessage("Started running neural network");
+                NeuralTrainer.neuralNetworkRunner.startRunning();
             }
         }
 

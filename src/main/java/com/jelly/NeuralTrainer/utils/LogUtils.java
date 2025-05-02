@@ -8,7 +8,7 @@ public class LogUtils {
     static Minecraft mc = Minecraft.getMinecraft();
     public static void addMessage(String message) {
         mc.thePlayer.addChatMessage(new ChatComponentText(
-                EnumChatFormatting.BLUE + "" + EnumChatFormatting.BOLD + "MightyMiner " + EnumChatFormatting.RESET + EnumChatFormatting.DARK_GRAY + "» " + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + message
+                EnumChatFormatting.BLUE + "" + EnumChatFormatting.BOLD + "NeuralTrainer " + EnumChatFormatting.RESET + EnumChatFormatting.DARK_GRAY + "» " + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + message
         ));
     }
     public static void debugLog(String log) {

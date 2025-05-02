@@ -52,6 +52,7 @@ sourceSets.main {
 // Dependencies:
 
 repositories {
+    mavenCentral()
     maven("https://repo.spongepowered.org/maven/")
     maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1")
     maven("https://repo.polyfrost.cc/releases")
@@ -79,6 +80,8 @@ dependencies {
 
     runtimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.2.0")
     shadowImpl("it.unimi.dsi:fastutil:8.2.1")
+
+    // shadowImpl ("org.tensorflow:tensorflow-core-api:0.4.2")
 }
 
 // Tasks:
