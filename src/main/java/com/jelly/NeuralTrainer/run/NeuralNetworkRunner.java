@@ -38,7 +38,7 @@ public class NeuralNetworkRunner {
     private boolean running = false;
     private final Gson gson = new Gson();
 
-    private final int TIMESTEPS = 60;
+    private final int TIMESTEPS = 10;
     private final Deque<float[][][]> frameBuffer = new ArrayDeque<>();
 
     private ExecutorService executor;
@@ -158,14 +158,20 @@ public class NeuralNetworkRunner {
         int targetW = frame_x;
         int targetH = frame_y;
 
-        ByteBuffer buffer = BufferUtils.createByteBuffer(fullW * fullH * 4);
+        // Crop middle 70% of screen
+        int cropX = fullW / 15; // 15% margin on left and right
+        int cropY = fullH / 15; // 15% margin on top and bottom
+        int cropW = fullW - 2 * cropX;
+        int cropH = fullH - 2 * cropY;
+
+        ByteBuffer buffer = BufferUtils.createByteBuffer(cropW * cropH * 4);
         GL11.glReadBuffer(GL11.GL_FRONT);
-        GL11.glReadPixels(0, 0, fullW, fullH, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
+        GL11.glReadPixels(cropX, cropY, cropW, cropH, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
         buffer.rewind();
 
         float[][][] result = new float[targetH][targetW][3];
-        int scaleX = fullW / targetW;
-        int scaleY = fullH / targetH;
+        int scaleX = cropW / targetW;
+        int scaleY = cropH / targetH;
 
         for (int ty = 0; ty < targetH; ty++) {
             for (int tx = 0; tx < targetW; tx++) {
@@ -173,9 +179,9 @@ public class NeuralNetworkRunner {
                 for (int sy = 0; sy < scaleY; sy++) {
                     for (int sx = 0; sx < scaleX; sx++) {
                         int x = tx * scaleX + sx;
-                        int y = (fullH - 1) - (ty * scaleY + sy);
-                        if (x < fullW && y < fullH) {
-                            int i = (y * fullW + x) * 4;
+                        int y = (cropH - 1) - (ty * scaleY + sy); // vertical flip
+                        if (x < cropW && y < cropH) {
+                            int i = (y * cropW + x) * 4;
                             b += buffer.get(i) & 0xFF;
                             g += buffer.get(i + 1) & 0xFF;
                             r += buffer.get(i + 2) & 0xFF;

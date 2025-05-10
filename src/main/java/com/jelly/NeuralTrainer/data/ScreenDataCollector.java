@@ -22,7 +22,7 @@ public class ScreenDataCollector {
     private final KeyBinding keybindW = mc.gameSettings.keyBindForward;
     private final KeyBinding keybindS = mc.gameSettings.keyBindBack;
     private final KeyBinding keyBindJump = mc.gameSettings.keyBindJump;
-    private final File raw_dataset = new File(DATASET_PATH);
+    private File raw_dataset;
 
     private float lastYaw = Float.NaN;
     private float lastPitch = Float.NaN;
@@ -33,7 +33,8 @@ public class ScreenDataCollector {
 
     public void startRecording() {
         recording = true;
-        initializeFile();
+        String timestamp = new java.text.SimpleDateFormat("yyyy-MM-dd_HH-mm-ss-SSS").format(new java.util.Date());
+        raw_dataset = new File("raw_dataset/screendata_" + timestamp + ".txt");
     }
 
     public void stopRecording() {
@@ -51,8 +52,14 @@ public class ScreenDataCollector {
         float deltaYaw = Float.isNaN(lastYaw) ? 0 : wrapAngle(currentYaw - lastYaw);
         float deltaPitch = Float.isNaN(lastPitch) ? 0 : wrapAngle(currentPitch - lastPitch);
 
+        System.out.println("delta yaw: " + deltaYaw);
+        System.out.println("delta print: " + deltaPitch);
+
         int discretizedYaw = discretize(deltaYaw, new int[]{-90, -50, -20, -10, -4, -2, 0, 2, 4, 10, 20, 50, 90});
         int discretizedPitch = discretize(deltaPitch, new int[]{-40, -20, -10, -4, -2, 0, 2, 4, 10, 20, 40});
+
+        System.out.println("discretized yaw: " + discretizedYaw);
+        System.out.println("discretized print: " + discretizedPitch);
 
         lastYaw = currentYaw;
         lastPitch = currentPitch;
@@ -68,19 +75,28 @@ public class ScreenDataCollector {
         };
 
         try {
-            // Capture framebuffer pixels
+            // Capture framebuffer pixels (middle 70% of the screen)
             int width = mc.getFramebuffer().framebufferTextureWidth;
             int height = mc.getFramebuffer().framebufferTextureHeight;
-            ByteBuffer buffer = BufferUtils.createByteBuffer(width * height * 4); // 4 bytes per pixel (RGBA)
+
+            // Calculate the middle 70% of the screen width and height
+            int startX = width / 15; // 15% margin on both sides
+            int startY = height / 15; // 15% margin on top and bottom
+            int endX = width - startX;
+            int endY = height - startY;
+
+            int cropWidth = endX - startX;
+            int cropHeight = endY - startY;
+            ByteBuffer buffer = BufferUtils.createByteBuffer(cropWidth * cropHeight * 4); // 4 bytes per pixel (RGBA)
 
             GL11.glReadBuffer(GL11.GL_FRONT);
-            GL11.glReadPixels(0, 0, width, height, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
+            GL11.glReadPixels(startX, startY, cropWidth, cropHeight, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
 
             // Create array to hold grayscale values (before downscaling)
-            int[] grayscaleFullRes = new int[width * height];
+            int[] grayscaleFullRes = new int[cropWidth * cropHeight];
 
             // Convert pixels to grayscale
-            for (int i = 0; i < width * height; i++) {
+            for (int i = 0; i < cropWidth * cropHeight; i++) {
                 int b = buffer.get(i * 4) & 0xFF;
                 int g = buffer.get(i * 4 + 1) & 0xFF;
                 int r = buffer.get(i * 4 + 2) & 0xFF;
@@ -92,8 +108,8 @@ public class ScreenDataCollector {
             // Downscale to 32 x 32
             int targetWidth = 32;
             int targetHeight = 32;
-            int scaleX = width / targetWidth;
-            int scaleY = height / targetHeight;
+            int scaleX = cropWidth / targetWidth;
+            int scaleY = cropHeight / targetHeight;
 
             // (after computing downscaled pixels)
             byte[] pixelArray = new byte[targetWidth * targetHeight];
@@ -105,9 +121,9 @@ public class ScreenDataCollector {
                     for (int sy = 0; sy < scaleY; sy++) {
                         for (int sx = 0; sx < scaleX; sx++) {
                             int sourceX = tx * scaleX + sx;
-                            int sourceY = (height - 1) - (ty * scaleY + sy); // flip the vertical
-                            if (sourceX < width && sourceY < height) {
-                                sum += grayscaleFullRes[sourceY * width + sourceX];
+                            int sourceY = (cropHeight - 1) - (ty * scaleY + sy); // flip the vertical
+                            if (sourceX < cropWidth && sourceY < cropHeight) {
+                                sum += grayscaleFullRes[sourceY * cropWidth + sourceX];
                                 count++;
                             }
                         }
@@ -163,7 +179,6 @@ public class ScreenDataCollector {
             System.out.println("Directory already exists.");
         }
 
-
         try {
             if (raw_dataset.createNewFile()) {
                 System.out.println("File created: " + raw_dataset.getName());
@@ -174,7 +189,6 @@ public class ScreenDataCollector {
             System.out.println("An error occurred while creating the file.");
             e.printStackTrace();
         }
-
     }
 
     private float wrapAngle(float angle) {
