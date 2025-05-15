@@ -15,7 +15,6 @@ import java.nio.ByteBuffer;
 public class ScreenDataCollector {
 
     private final Minecraft mc = Minecraft.getMinecraft();
-    public static final String DATASET_PATH = "raw_dataset/screendata.txt";
 
     private final KeyBinding keybindA = mc.gameSettings.keyBindLeft;
     private final KeyBinding keybindD =  mc.gameSettings.keyBindRight;
@@ -34,7 +33,7 @@ public class ScreenDataCollector {
     public void startRecording() {
         recording = true;
         String timestamp = new java.text.SimpleDateFormat("yyyy-MM-dd_HH-mm-ss-SSS").format(new java.util.Date());
-        raw_dataset = new File("raw_dataset/screendata_" + timestamp + ".txt");
+        raw_dataset = new File("raw_dataset/screendata_" + mc.thePlayer.getName() + "_" + timestamp + ".txt");
     }
 
     public void stopRecording() {
@@ -75,41 +74,33 @@ public class ScreenDataCollector {
         };
 
         try {
-            // Capture framebuffer pixels (middle 70% of the screen)
+            // Capture full framebuffer pixels (no cropping)
             int width = mc.getFramebuffer().framebufferTextureWidth;
             int height = mc.getFramebuffer().framebufferTextureHeight;
 
-            // Calculate the middle 70% of the screen width and height
-            int startX = width / 15; // 15% margin on both sides
-            int startY = height / 15; // 15% margin on top and bottom
-            int endX = width - startX;
-            int endY = height - startY;
-
-            int cropWidth = endX - startX;
-            int cropHeight = endY - startY;
-            ByteBuffer buffer = BufferUtils.createByteBuffer(cropWidth * cropHeight * 4); // 4 bytes per pixel (RGBA)
+            ByteBuffer buffer = BufferUtils.createByteBuffer(width * height * 4); // 4 bytes per pixel (RGBA)
 
             GL11.glReadBuffer(GL11.GL_FRONT);
-            GL11.glReadPixels(startX, startY, cropWidth, cropHeight, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
+            GL11.glReadPixels(0, 0, width, height, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
 
             // Create array to hold grayscale values (before downscaling)
-            int[] grayscaleFullRes = new int[cropWidth * cropHeight];
+            int[] grayscaleFullRes = new int[width * height];
 
             // Convert pixels to grayscale
-            for (int i = 0; i < cropWidth * cropHeight; i++) {
+            for (int i = 0; i < width * height; i++) {
                 int b = buffer.get(i * 4) & 0xFF;
                 int g = buffer.get(i * 4 + 1) & 0xFF;
                 int r = buffer.get(i * 4 + 2) & 0xFF;
-                // Calculate grayscale: simple average or weighted average
+                // Calculate grayscale: simple average
                 int gray = (r + g + b) / 3;
                 grayscaleFullRes[i] = gray;
             }
 
-            // Downscale to 32 x 32
-            int targetWidth = 32;
-            int targetHeight = 32;
-            int scaleX = cropWidth / targetWidth;
-            int scaleY = cropHeight / targetHeight;
+            // Downscale to 280 x 150
+            int targetWidth = 280;
+            int targetHeight = 150;
+            int scaleX = width / targetWidth;
+            int scaleY = height / targetHeight;
 
             // (after computing downscaled pixels)
             byte[] pixelArray = new byte[targetWidth * targetHeight];
@@ -121,9 +112,9 @@ public class ScreenDataCollector {
                     for (int sy = 0; sy < scaleY; sy++) {
                         for (int sx = 0; sx < scaleX; sx++) {
                             int sourceX = tx * scaleX + sx;
-                            int sourceY = (cropHeight - 1) - (ty * scaleY + sy); // flip the vertical
-                            if (sourceX < cropWidth && sourceY < cropHeight) {
-                                sum += grayscaleFullRes[sourceY * cropWidth + sourceX];
+                            int sourceY = (height - 1) - (ty * scaleY + sy); // flip the vertical
+                            if (sourceX < width && sourceY < height) {
+                                sum += grayscaleFullRes[sourceY * width + sourceX];
                                 count++;
                             }
                         }

@@ -25,8 +25,8 @@ public class NeuralNetworkRunner {
 
     private static final float[] mouseYBins = {-40, -20, -10, -4, -2, 0, 2, 4, 10, 20, 40};
 
-    private static final int frame_x = 32;
-    private static final int frame_y = 32;
+    private static final int frame_x = 280;
+    private static final int frame_y = 150;
 
     private final Minecraft mc = Minecraft.getMinecraft();
     private final KeyBinding[] keybinds = {
@@ -38,7 +38,7 @@ public class NeuralNetworkRunner {
     private boolean running = false;
     private final Gson gson = new Gson();
 
-    private final int TIMESTEPS = 10;
+    private final int TIMESTEPS = 60;
     private final Deque<float[][][]> frameBuffer = new ArrayDeque<>();
 
     private ExecutorService executor;
@@ -158,20 +158,14 @@ public class NeuralNetworkRunner {
         int targetW = frame_x;
         int targetH = frame_y;
 
-        // Crop middle 70% of screen
-        int cropX = fullW / 15; // 15% margin on left and right
-        int cropY = fullH / 15; // 15% margin on top and bottom
-        int cropW = fullW - 2 * cropX;
-        int cropH = fullH - 2 * cropY;
-
-        ByteBuffer buffer = BufferUtils.createByteBuffer(cropW * cropH * 4);
+        ByteBuffer buffer = BufferUtils.createByteBuffer(fullW * fullH * 4); // 4 bytes per pixel (RGBA)
         GL11.glReadBuffer(GL11.GL_FRONT);
-        GL11.glReadPixels(cropX, cropY, cropW, cropH, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
+        GL11.glReadPixels(0, 0, fullW, fullH, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
         buffer.rewind();
 
         float[][][] result = new float[targetH][targetW][3];
-        int scaleX = cropW / targetW;
-        int scaleY = cropH / targetH;
+        int scaleX = fullW / targetW;
+        int scaleY = fullH / targetH;
 
         for (int ty = 0; ty < targetH; ty++) {
             for (int tx = 0; tx < targetW; tx++) {
@@ -179,9 +173,9 @@ public class NeuralNetworkRunner {
                 for (int sy = 0; sy < scaleY; sy++) {
                     for (int sx = 0; sx < scaleX; sx++) {
                         int x = tx * scaleX + sx;
-                        int y = (cropH - 1) - (ty * scaleY + sy); // vertical flip
-                        if (x < cropW && y < cropH) {
-                            int i = (y * cropW + x) * 4;
+                        int y = (fullH - 1) - (ty * scaleY + sy); // vertical flip
+                        if (x < fullW && y < fullH) {
+                            int i = (y * fullW + x) * 4;
                             b += buffer.get(i) & 0xFF;
                             g += buffer.get(i + 1) & 0xFF;
                             r += buffer.get(i + 2) & 0xFF;
