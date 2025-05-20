@@ -25,8 +25,8 @@ public class NeuralNetworkRunner {
 
     private static final float[] mouseYBins = {-40, -20, -10, -4, -2, 0, 2, 4, 10, 20, 40};
 
-    private static final int frame_x = 280;
-    private static final int frame_y = 150;
+    private static final int frame_x = 80;
+    private static final int frame_y = 45;
 
     private final Minecraft mc = Minecraft.getMinecraft();
     private final KeyBinding[] keybinds = {
@@ -38,7 +38,7 @@ public class NeuralNetworkRunner {
     private boolean running = false;
     private final Gson gson = new Gson();
 
-    private final int TIMESTEPS = 60;
+    private final int TIMESTEPS = 20;
     private final Deque<float[][][]> frameBuffer = new ArrayDeque<>();
 
     private ExecutorService executor;
@@ -51,6 +51,8 @@ public class NeuralNetworkRunner {
 
     public void startRunning() {
         running = true;
+        latestActions = null;
+
         frameBuffer.clear();
         isInferenceRunning = false;
         executor = Executors.newSingleThreadExecutor();
@@ -81,15 +83,15 @@ public class NeuralNetworkRunner {
             frameBuffer.removeFirst();
         }
 
-        // Convert to 96-frame array
-        float[][][][][] frames96 = new float[1][TIMESTEPS][frame_x][frame_y][3];
+        // Convert to TIMESTEPS-frame array
+        float[][][][] frames = new float[TIMESTEPS][frame_x][frame_y][3];
         int i = 0;
         for (float[][][] f : frameBuffer) {
-            frames96[0][i++] = f;
+            frames[i++] = f;
         }
 
         if (executor != null && !isInferenceRunning && latestActions == null) {
-            float[][][][][] framesToSend = frames96.clone(); // clone to avoid mutation
+            float[][][][] framesToSend = frames.clone(); // clone to avoid mutation
             isInferenceRunning = true;
             executor.submit(() -> {
                 List<Float> result = sendToInferenceServer(framesToSend);
@@ -98,18 +100,23 @@ public class NeuralNetworkRunner {
             });
         }
 
-        if (latestActions == null) return;
-
-        List<Float> actions = latestActions;
+        if (latestActions == null) {
+            for (KeyBinding key : keybinds) {
+                KeyBinding.setKeyBindState(key.getKeyCode(), false);
+            }
+            KeyBinding.setKeyBindState(mc.gameSettings.keyBindAttack.getKeyCode(), false);
+            KeyBinding.setKeyBindState(mc.gameSettings.keyBindUseItem.getKeyCode(), false);
+            return;
+        }
 
         for (int k = 0; k < 5; k++) {
-            boolean pressed = actions.get(k) > 0.5f;
+            boolean pressed = latestActions.get(k) > 0.5f;
             KeyBinding.setKeyBindState(keybinds[k].getKeyCode(), pressed);
         }
 
         // Handle left and right clicks (indexes 5 and 6)
-        boolean leftClick = actions.get(5) > 0.5f;
-        boolean rightClick = actions.get(6) > 0.5f;
+        boolean leftClick = latestActions.get(5) > 0.5f;
+        boolean rightClick = latestActions.get(6) > 0.5f;
 
         KeyBindUtils.setKeyBindState(mc.gameSettings.keyBindAttack, leftClick);
         KeyBindUtils.setKeyBindState(mc.gameSettings.keyBindUseItem, rightClick);
@@ -121,7 +128,7 @@ public class NeuralNetworkRunner {
         int yawIdx = 0;
         float yawMax = -1;
         for (int k = 0; k < mouseXBins.length; k++) {
-            float val = actions.get(yawStart + k);
+            float val = latestActions.get(yawStart + k);
             if (val > yawMax) {
                 yawMax = val;
                 yawIdx = k;
@@ -131,7 +138,7 @@ public class NeuralNetworkRunner {
         int pitchIdx = 0;
         float pitchMax = -1;
         for (int k = 0; k < mouseYBins.length; k++) {
-            float val = actions.get(pitchStart + k);
+            float val = latestActions.get(pitchStart + k);
             if (val > pitchMax) {
                 pitchMax = val;
                 pitchIdx = k;
@@ -143,8 +150,8 @@ public class NeuralNetworkRunner {
 
         // Print descriptive action log
         System.out.printf("Actions: [W: %b, A: %b, S: %b, D: %b, Space: %b, LeftClick: %b, RightClick: %b, YawDelta: %.2f, PitchDelta: %.2f]%n",
-                actions.get(1) > 0.5f, actions.get(0) > 0.5f, actions.get(2) > 0.5f, actions.get(3) > 0.5f, actions.get(4) > 0.5f,
-                actions.get(5) > 0.5f, actions.get(6) > 0.5f, yawDelta, pitchDelta);
+                latestActions.get(1) > 0.5f, latestActions.get(0) > 0.5f, latestActions.get(2) > 0.5f, latestActions.get(3) > 0.5f, latestActions.get(4) > 0.5f,
+                latestActions.get(5) > 0.5f, latestActions.get(6) > 0.5f, yawDelta, pitchDelta);
 
         mc.thePlayer.rotationYaw += yawDelta;
         mc.thePlayer.rotationPitch += pitchDelta;
@@ -153,46 +160,62 @@ public class NeuralNetworkRunner {
     }
 
     private float[][][] captureAndResizeScreen() {
-        int fullW = mc.getFramebuffer().framebufferTextureWidth;
-        int fullH = mc.getFramebuffer().framebufferTextureHeight;
-        int targetW = frame_x;
-        int targetH = frame_y;
+        int width = mc.getFramebuffer().framebufferTextureWidth;
+        int height = mc.getFramebuffer().framebufferTextureHeight;
 
-        ByteBuffer buffer = BufferUtils.createByteBuffer(fullW * fullH * 4); // 4 bytes per pixel (RGBA)
+        ByteBuffer buffer = BufferUtils.createByteBuffer(width * height * 4); // 4 bytes per pixel (RGBA)
+
         GL11.glReadBuffer(GL11.GL_FRONT);
-        GL11.glReadPixels(0, 0, fullW, fullH, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
-        buffer.rewind();
+        GL11.glReadPixels(0, 0, width, height, GL12.GL_BGRA, GL11.GL_UNSIGNED_BYTE, buffer);
 
-        float[][][] result = new float[targetH][targetW][3];
-        int scaleX = fullW / targetW;
-        int scaleY = fullH / targetH;
+        // Grayscale pixel array
+        int[] grayscaleFullRes = new int[width * height];
+        for (int i = 0; i < width * height; i++) {
+            int b = buffer.get(i * 4) & 0xFF;
+            int g = buffer.get(i * 4 + 1) & 0xFF;
+            int r = buffer.get(i * 4 + 2) & 0xFF;
+            int gray = (r + g + b) / 3;
+            grayscaleFullRes[i] = gray;
+        }
 
-        for (int ty = 0; ty < targetH; ty++) {
-            for (int tx = 0; tx < targetW; tx++) {
-                int r = 0, g = 0, b = 0, count = 0;
+        // Resize to 280x150 and convert to RGB float array normalized to [0,1]
+        float[][][] result = new float[frame_y][frame_x][3];
+
+        int scaleX = width / frame_x;
+        int scaleY = height / frame_y;
+
+        for (int ty = 0; ty < frame_y; ty++) {
+            for (int tx = 0; tx < frame_x; tx++) {
+                int sum = 0;
+                int count = 0;
                 for (int sy = 0; sy < scaleY; sy++) {
                     for (int sx = 0; sx < scaleX; sx++) {
-                        int x = tx * scaleX + sx;
-                        int y = (fullH - 1) - (ty * scaleY + sy); // vertical flip
-                        if (x < fullW && y < fullH) {
-                            int i = (y * fullW + x) * 4;
-                            b += buffer.get(i) & 0xFF;
-                            g += buffer.get(i + 1) & 0xFF;
-                            r += buffer.get(i + 2) & 0xFF;
+                        int sourceX = tx * scaleX + sx;
+                        int sourceY = (height - 1) - (ty * scaleY + sy); // Flip vertically
+
+                        if (sourceX < width && sourceY < height) {
+                            int gray = grayscaleFullRes[sourceY * width + sourceX];
+                            sum += gray;
                             count++;
                         }
                     }
                 }
-                result[ty][tx][0] = r / (float) (count * 255);
-                result[ty][tx][1] = g / (float) (count * 255);
-                result[ty][tx][2] = b / (float) (count * 255);
+
+                float avgGray = sum / (float) count;
+
+                // Convert to "fake" RGB (grayscale repeated in 3 channels)
+                result[ty][tx][0] = avgGray;
+                result[ty][tx][1] = avgGray;
+                result[ty][tx][2] = avgGray;
             }
         }
 
         return result;
     }
 
-    private List<Float> sendToInferenceServer(float[][][][][] frames96) {
+
+
+    private List<Float> sendToInferenceServer(float[][][][] frames) {
         try {
             URL url = new URL("http://localhost:8000/predict");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -201,7 +224,7 @@ public class NeuralNetworkRunner {
             conn.setRequestProperty("Content-Type", "application/json");
 
             Map<String, Object> payload = new HashMap<>();
-            payload.put("frame", frames96);
+            payload.put("frame", frames);
 
             String json = gson.toJson(payload);
             try (OutputStream os = conn.getOutputStream()) {

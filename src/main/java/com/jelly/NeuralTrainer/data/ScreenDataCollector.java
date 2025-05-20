@@ -33,7 +33,7 @@ public class ScreenDataCollector {
     public void startRecording() {
         recording = true;
         String timestamp = new java.text.SimpleDateFormat("yyyy-MM-dd_HH-mm-ss-SSS").format(new java.util.Date());
-        raw_dataset = new File("raw_dataset/screendata_" + mc.thePlayer.getName() + "_" + timestamp + ".txt");
+        raw_dataset = new File("raw_dataset/screendata_80x45_" + mc.thePlayer.getName() + "_" + timestamp + ".txt");
     }
 
     public void stopRecording() {
@@ -51,14 +51,8 @@ public class ScreenDataCollector {
         float deltaYaw = Float.isNaN(lastYaw) ? 0 : wrapAngle(currentYaw - lastYaw);
         float deltaPitch = Float.isNaN(lastPitch) ? 0 : wrapAngle(currentPitch - lastPitch);
 
-        System.out.println("delta yaw: " + deltaYaw);
-        System.out.println("delta print: " + deltaPitch);
-
         int discretizedYaw = discretize(deltaYaw, new int[]{-90, -50, -20, -10, -4, -2, 0, 2, 4, 10, 20, 50, 90});
         int discretizedPitch = discretize(deltaPitch, new int[]{-40, -20, -10, -4, -2, 0, 2, 4, 10, 20, 40});
-
-        System.out.println("discretized yaw: " + discretizedYaw);
-        System.out.println("discretized print: " + discretizedPitch);
 
         lastYaw = currentYaw;
         lastPitch = currentPitch;
@@ -96,9 +90,9 @@ public class ScreenDataCollector {
                 grayscaleFullRes[i] = gray;
             }
 
-            // Downscale to 280 x 150
-            int targetWidth = 280;
-            int targetHeight = 150;
+            // Downscale to 80 x 45
+            int targetWidth = 80;
+            int targetHeight = 45;
             int scaleX = width / targetWidth;
             int scaleY = height / targetHeight;
 
